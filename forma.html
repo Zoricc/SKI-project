@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stil.css">
+    <title>Hrana</title>
+
+
+</head>
+<body>
+    <a href="index.html"><img src="Home-512.png" alt="" id="slicicaHome"></a>
+    <h1>Forma za Narucivanje Hrane</h1>
+    <hr>
+    
+    <div id="celaForma">
+        
+        
+        <h2>Rostilj</h2>
+        <h3>Unesite podatke</h3>
+        <div id="forma">
+        <form name="mojaForma" id="mojaForma" action="" method="GET" >
+            <label for="ime" class="labele">Ime:</label>
+            <input type="text" id="ime" name="ime" class="unos" ><br><br>
+            <label for="prezime" class="labele">Prezime:</label>
+            <input type="text" id="prezime" name="prezime" class="unos"><br><br>
+            <label for="adresa" class="labele">Adresa:</label>
+            <input type="text" id="adresa" name="adresa" class="unos"><br><br>
+            <label for="izbor" class="labele">Izbor:</label>
+            <select id="izbor" name="izbor" >
+                <option value="Mala Pjeskavica">Đačka Pljeskavica</option>
+                <option value="Pljeskavica">Pljeskavica</option>
+                <option value="Velika Pljeskavica">Velika Pljeskavica</option>
+                <option value="Punjena Pljeskavica">Punjena Pljeskavica</option>
+              </select><br><br>
+              <label for="prilog">Prilog:</label><br>
+              <input type="checkbox" id="kecap" name="kecap" value="Kecap">
+              <label for="kecap">Kecap 0din</label><br>
+              <input type="checkbox" id="majonez" name="majonez" value="Majonez">
+              <label for="vehicle2"> Majonez 0din</label><br>
+              <input type="checkbox" id="pavlaka" name="pavlaka" value="Pavlaka">
+              <label for="Pavlaka">Pavlaka 0din</label><br> 
+              <input type="checkbox" id="zSalata" name="zSalata" value="Zelena Salata">
+              <label for="zSalata">Zelena Salata 0din</label><br> 
+              <input type="checkbox" id="urnebes" name="urnebes" value="Urnebes" >
+              <label for="Urnebes">Urnebes 30din</label><br> 
+              <input type="checkbox" id="tartar" name="tartar" value="Tartar sos">
+              <label for="Tartar">Tartat sos 30din</label><br> 
+              <input type="submit" value="Dodaj" id="dodaj">
+            </form>
+        </div>
+        
+        
+        
+        <div id="cenovnik">
+            <p class="cena">Đačka Plejskavica 100g = 180din</p>
+            <p class="cena">Pljeskavica 200g = 230din</p>
+            <p class="cena">Velika Plejskavica 300g = 300din</p>
+            <p class="cena">Punjena Pljeskavica 300g = 350din</p>
+        </div>
+
+        <br><br><br>
+
+        <h2 id="gost"></h2>
+        <h3 id="obrisi" onclick="brisanje()">Obrisi Sve</h3>
+        <div id="korpa">
+<br>
+        </div>
+        <h2 id="ukupnaCena"></h2>
+        <h3 id="naruci" onclick="naruci()">Naruci</h3>
+        
+    </div>
+    <hr>
+    
+    <script>
+        ukupnaCena = 0;
+        cena = 0;
+        praznaKorpa = document.getElementById("korpa").innerHTML;
+        var forma = document.getElementById("mojaForma");
+        pIme = forma.ime.value;
+        ppIme = forma.prezime.value;
+        pAdres = forma.adresa.value;
+        _prilog = "";
+        forma.onsubmit = function dodaj (e) {
+
+        e.preventDefault();
+         
+          var _ime = forma.ime.value;
+          var _pime = forma.prezime.value;
+          var _adres = forma.adresa.value;
+          var _izbor = forma.izbor.value;
+          
+        
+          // Validacija unosa
+          var  x = document.forms["mojaForma"]["ime"].value;
+          var y = document.forms["mojaForma"]["prezime"].value;
+          var z = document.forms["mojaForma"]["adresa"].value;
+
+          if(x == ""){
+            alert("Uneti ime");
+           return false;
+          }
+          if(y == ""){
+            alert("Uneti prezime");
+           return false;
+          }
+          if(z == ""){
+            alert("Uneti adresu");
+           return false;
+          }
+
+          // Proverava sta smo izabrali.
+          
+        if(_izbor == "Mala Pjeskavica"){
+            cena += 150;}
+        if(_izbor == "Pljeskavica"){
+            cena += 200;}
+        if(_izbor == "Velika Pljeskavica"){
+            cena += 250;}
+        if(_izbor == "Punjena Pljeskavica"){
+            cena += 300;}    
+
+
+            
+          
+          
+          // Proverava sta je stiklirano od priloga
+
+          if(document.getElementById("kecap").checked){
+            _prilog = _prilog + " Kecap";
+        }
+          if(document.getElementById("majonez").checked){
+            _prilog = _prilog + " Majonez";
+        }
+          if(document.getElementById("pavlaka").checked){
+            _prilog = _prilog + " Pavlaka";
+        }
+          if(document.getElementById("zSalata").checked){
+            _prilog = _prilog + " Zelena Salata";
+        }
+          if(document.getElementById("urnebes").checked){
+            _prilog = _prilog + " Urnebes";
+            cena += 30;
+        }
+          if(document.getElementById("tartar").checked){
+            _prilog = _prilog + " Tartar sos";
+            cena += 30;
+        }
+        console.log(_prilog);
+        
+        
+    
+
+          
+          if(pIme != _ime || ppIme != _pime || pAdres != _adres){
+            document.getElementById("gost").innerHTML = '';
+            document.getElementById("gost").innerHTML = '' + "<p>"+_ime+ " " + _pime + " "+ _adres+"</p>";
+            document.getElementById("korpa").innerHTML = '';
+            document.getElementById("korpa").innerHTML = document.getElementById("korpa").innerHTML +"<span>"+ _izbor + " | "+_prilog +" |"+ " CENA = "+cena+"</span>"+"<br> ";
+            
+           
+            
+
+            pIme = _ime;
+            ppIme = _pime;
+            pAdres = _adres;
+         }
+          
+        else{
+            document.getElementById("gost").innerHTML = '' + "<p>"+_ime+ " " + _pime + " "+ _adres+"</p>";
+            document.getElementById("korpa").innerHTML = document.getElementById("korpa").innerHTML +"<span>"+ _izbor + " | "+_prilog +" |"+ " CENA = "+cena+"</span>"+"<br> ";
+        }
+        ukupnaCena += cena;
+        document.getElementById("ukupnaCena").innerHTML = "<p>" + "UKUPNA CENA = " + ukupnaCena + "</p>";
+            
+            _prilog = "";
+            
+            cena = 0;   
+    }
+        function naruci(){
+         
+          if(document.getElementById("korpa").innerHTML == praznaKorpa){
+            alert("Nista nije uneto");
+          }
+          else{
+            alert("Uspesno ste narucili.");
+            location.reload();
+          }
+        
+        }
+       function brisanje(){
+        cena = 0;
+        ukupnaCena = 0; 
+        document.getElementById("korpa").innerHTML = praznaKorpa;
+        document.getElementById("ukupnaCena").innerHTML = "<p>" + "UKUPNA CENA = " + ukupnaCena + "</p>";
+       }
+    </script>
+</body>
+</html>

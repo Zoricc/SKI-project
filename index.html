@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stil.css">
+    <title>Početna</title>
+
+</head>
+<body>
+    <a href="index.html"><img src="Home-512.png" class="center" alt=""></a>
+    
+    <header>
+        <h1 id="reklama">Reklama</h1>
+    </header>
+    <br><hr><br>
+    <nav>
+        <h2><a href="video.html" class="link">Video</a></h2> 
+        <h2><a href="forma.html" class="link">Forma</a></h2> 
+        <h2><a href="puzla.html" class="link">Igra</a></h2>
+        <br><br><hr>
+    </nav>
+    <br><br>
+    <main>
+        <section>
+            <h2>Marko Zorić NRT-49/20</h2>
+        <p class="zadatak">1 - Link ka video klipu.</p>
+        <p class="zadatak">2 - Link ka stranici za naručivanje hrane</p>
+        <p class="zadatak">3 - Link ka igri "Složi klizni puzzle 3x3.</p>
+       <br><hr><br>
+        <article>
+            <h2>Umotvorine</h2>
+            <p id="bigBrainTime"></p>
+        </article>
+    </section>        
+    </main>
+    <br><hr><br>
+    <footer>
+        &copy 2022 Marko Zorić All Rights reserved.
+    </footer>
+    <br>
+    
+    
+    <script>
+         mudrost = ["Bolje vrabac u ruci, nego golub na grani.",
+                    "Ništa nema gore od mutne vode i mutna čoveka.",
+                    "Ako je neko lud, ne budi mu drug.",
+                    "Gvožđe se kuje dok je vruće.",
+                    "Ko mnogo priča, ili sve zna, ili sve laže."];
+        
+    
+        document.getElementById("bigBrainTime").innerHTML = mudrost[0];
+        i = 0;
+        
+         setInterval(function(){
+             document.getElementById("bigBrainTime").innerHTML = mudrost[i];
+             i++;
+        if(i == 5){i = 0;}
+            }, 10000);
+    </script>
+    
+     
+    
+    
+</body>
+</html>

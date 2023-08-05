@@ -1,0 +1,202 @@
+body{
+    background-color:#B15FC2;
+}
+.link{
+    background-color: #715D75; 
+    border: 2px solid black;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+
+    display: inline-block;
+    font-size: 25px;
+    border-radius: 15%;
+    transition: 0.5s;
+    
+}
+h2{
+    font-size: 40px;
+    display: inline;
+    padding: 30px;
+}
+img{
+    height: 50px;
+    width: 50px;
+}
+h1{
+    font-size: 40px;
+}
+hr{
+    color: #6B3975;
+}
+p{
+    font-size: 19px;
+}
+#bigBrainTime{
+    font-size: 25px;
+
+    
+}
+.zadatak{
+    font-size: 29px;
+    
+}
+.link:hover{
+    color:#EEC3F7;
+    background-color: #6B3975;
+    border: 2px solid #EEC3F7;
+    
+}
+nav{
+text-align: center;
+}
+section{
+    text-align: center;
+}
+footer{
+    text-align: center;
+}
+
+#reklama {
+font-size: 80px;
+color: #fff;
+text-align: center;
+animation: glow 1s ease-in-out infinite alternate;
+animation: glow 1s ease-in-out infinite alternate;
+animation: glow 1s ease-in-out infinite alternate;
+}
+.center {
+display: block;
+margin-left: auto;
+margin-right: auto;
+}
+
+@keyframes glow {
+from {
+text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+}
+to {
+text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+}
+}
+
+
+
+
+
+#obrisi{
+    position: relative;
+    display: inline-block;
+    left: 560px;
+    top: -20px;
+  }
+  #naruci{
+    position: relative;
+    display: inline-block;
+    left: 600px;
+    top: -20px;
+  }
+  #slicicaHome{
+      width: 50px;
+      height: 50px;
+  }  
+  #celaForma{
+      width: 1000px;
+      height: 1000px;
+      overflow: hidden;
+  }
+  
+  #forma{
+  display: inline-block;
+    position: relative;
+   
+  }
+  #cenovnik{
+      background-color: #715D75;
+      width: 400px;
+      height: 300px;
+      border: 7px solid black;
+      display: inline-block;
+      position:relative;
+      overflow: hidden;
+      left: 350px;
+      right:700px;
+      border-radius: 10%;
+
+  } 
+  #korpa{
+      width: 650px;
+      height: 200px;
+      overflow: scroll;
+      border:5px solid black;
+      
+  }
+  .unos{
+    width: 150px;
+    height: 15px;
+    border:2px solid black;
+    border-radius: 30px;
+  }
+  #izbor{
+    width: 150px;
+    height: 25px;
+    border: 2px solid black;
+    border-radius: 20px;
+
+  
+  }
+  span{
+    font-size: 20px;
+    position: relative;
+    
+    border-radius: 7%;
+    margin: 1px;
+    padding: 2px;
+  }
+  #obrisi{
+    background-color: #715D75;
+    border: 2px solid black;
+    border-radius: 10%;
+    padding: 5px;
+    transition:0.6s;
+  }
+  
+  #naruci{
+    background-color: #715D75;
+    border: 2px solid black;
+    border-radius: 10%;
+    padding: 5px;
+    transition: 0.6s;
+  }
+  #obrisi:hover{
+    background-color:#6B3975;
+    border-color: #EEC3F7;
+     color:#EEC3F7;
+  }
+  #naruci:hover{
+    background-color:#6B3975;
+    border-color: #EEC3F7;
+     color:#EEC3F7;
+  }
+  .cena{
+    position: relative;
+    left: 50px;
+    top: 35px;
+    font-size: 22px;
+  }
+  #dodaj{
+    width: 70px;
+    height: 35px;
+    font-size: 18px;
+    border: 2px solid black;
+    border-radius: 10%;
+    background-color: #715D75;
+    padding: 5px;
+    transition: 0.6s;
+  }
+  #dodaj:hover{
+    background-color:#6B3975;
+    border-color: #EEC3F7;
+     color:#EEC3F7;
+  }
